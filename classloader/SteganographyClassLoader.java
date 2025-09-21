@@ -27,6 +27,8 @@ public class SteganographyClassLoader extends ClassLoader {
         try {
             BufferedImage img = ImageIO.read(url);
 
+            System.out.println(img.getWidth());
+
             SteganographyEncoder encoder = new SteganographyEncoder(img);
             byte[] bytes = encoder.decodeByteArray();
             return this.defineClass(name, bytes, 0, bytes.length);
