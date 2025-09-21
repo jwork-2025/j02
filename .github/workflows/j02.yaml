@@ -17,6 +17,8 @@ jobs:
       
       - name: Compile Java files
         run: |
+          javac -cp "lib/*" -d . encoder/*.java
+          javac -cp "lib/*" -d . classloader/*.java
           javac -cp "lib/*" -d . asciiPanel/*.java
           javac -cp "lib/*" -d . hulu/*.java
           javac -cp "lib/*" -d . *.java
