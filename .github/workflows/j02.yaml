@@ -17,11 +17,11 @@ jobs:
       
       - name: Compile Java files
         run: |
-          javac -cp "lib/*" -d . encoder/*.java
-          javac -cp "lib/*" -d . classloader/*.java
-          javac -cp "lib/*" -d . asciiPanel/*.java
-          javac -cp "lib/*" -d . hulu/*.java
-          javac -cp "lib/*" -d . *.java
+          javac -cp ".:lib/*" -d . encoder/*.java
+          javac -cp ".:lib/*" -d . classloader/*.java
+          javac -cp ".:lib/*" -d . asciiPanel/*.java
+          javac -cp ".:lib/*" -d . hulu/*.java
+          javac -cp ".:lib/*" -d . *.java
       
       # 使用 xvfb-run 运行程序
       - name: Run application with xvfb
