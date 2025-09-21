@@ -17,9 +17,9 @@ jobs:
       
       - name: Compile Java files
         run: |
-          javac -d . asciiPanel/*.java
-          javac -d . hulu/*.java
-          javac -d . *.java
+          javac -cp "lib/*" -d . asciiPanel/*.java
+          javac -cp "lib/*" -d . hulu/*.java
+          javac -cp "lib/*" -d . *.java
       
       # 使用 xvfb-run 运行程序
       - name: Run application with xvfb
